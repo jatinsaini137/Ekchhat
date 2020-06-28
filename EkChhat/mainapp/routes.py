@@ -55,11 +55,10 @@ def partner():
         from email.mime.multipart import MIMEMultipart
         from email.mime.text import MIMEText
 
-        MY_ADDRESS = 'itsjatin135@gmail.com'
-        PASSWORD = '7737495085JJatin'
+        MY_ADDRESS = 'your_mail_id'
+        PASSWORD = 'your_password'
 
-        #doremon.nobita.nobi@gmail.com
-        #1234@vipin
+       
         def get_contacts(filename):
             """
             Return two lists names, emails containing names and email addresses
