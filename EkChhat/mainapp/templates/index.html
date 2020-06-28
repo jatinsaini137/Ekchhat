@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EkChhat</title>
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
+</head>
+<body style="width: 100%; height: 100%;
+	 background-image: url({{ url_for('static',filename='images/img1.jpg')}});
+	 background-repeat: no-repeat;
+	  background-position: center;
+	background-attachment: fixed;
+	background-size: cover;">
+	<header>
+		<div class="menu-toggler">
+			<div class="bar half start"></div>
+			<div class="bar"></div>
+			<div class="bar half end"></div>
+		</div>
+		<nav class="top-nav">
+			<ul class="nav-list">
+				<li>
+					<a href="/" class="nav-link" title="">Home</a>
+				</li>
+				<li>
+					<a href="#about" class="nav-link" title="">About</a>
+				</li>
+				<li>
+					<a href="{{ url_for('donate') }}" class="nav-link" title="">Donate Food</a>
+				</li>
+				<li>
+					<a href="{{ url_for('partner') }}" class="nav-link" title="">Join Us</a>
+				</li>
+				<li>
+					<a href="#contact" class="nav-link" title="">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="landing-text">
+			<h1>EkChhat</h1>
+			<h6>Feeding Food Organisation</h6>
+		</div>
+	</header>
+
+	<section class="about" id="about">
+		<div class="container">
+			<div class="profile-img" data-aos="fade-right" data-aos-delay="300">
+				<img src="{{ url_for('static',filename='images/logo.jpeg')}}" alt="">
+			</div>
+			<div class="about-details" data-aos="fade-right" data-aos-delay="600">
+				<div class="about-heading">
+					<h1>About</h1>
+					<h6>Organisation</h6>
+				</div>
+				<p>
+					EkChat is a non-profit organization which gathers and disseminates nourishment for the noble cause of hunger-alleviation.
+					EkChat acts as nutrition warehouses for littler front organizations;
+					and offer nutrition directly to individuals struggling with hunger</p>
+				<div class="social-media">
+				<ul class="nav-list">
+					<li>
+						<a href="https://www.facebook.com/Ekchhatofficial-101802498164784/" class="icon-link" title="">
+							<i class="fab fa-facebook-square"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/ekchhatofficial/" class="icon-link" title="">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/ekchhatofficial" class="icon-link" title="">
+							<i class="fab fa-twitter-square"></i>
+						</a>
+					</li>
+					<!-- <li>
+						<a href="#" class="icon-link" title="">
+							<i class="fab fa-whatsapp-square"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://t.me/ekchhat" class="icon-link" title="">
+							<i class="fab fa-telegram-plane"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/channel/UCnsLF9tkW-gbGMnXCEUc5YA" class="icon-link" title="">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</li> -->
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="portfolio" id="portfolio">
+		<div class="container">
+			<div class="section-heading">
+				<h1>Overview</h1>
+			</div>
+			<div class="portfolio-item">
+				<div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
+					<img src="{{ url_for('static',filename='images/ck.jpg')}}" alt="">
+				</div>
+				<div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+					<h6>Donate Food</h6>
+					<h1>Someone will not sleep hungry tonight</h1>
+
+						<p>“No Matter How Small a Donation Is It has itself a Worth.”
+                        Our organisation is also a donating platform here a person belongs to
+                        any society who wants to donate food for the help of our poor society to
+                        enhance their well-being are candidly and honourably gratifying they
+                        can join the platform to know who needs it the most and can conveniently
+                        reach the needy ones to help them…
+					</p>
+					<a href="{{ url_for('donate') }}" class="cta" title="">View Details</a>
+				</div>
+			</div>
+			<div class="portfolio-item">
+				<div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="900">
+					<h6>Volunteer</h6>
+					<h1>Your Effort Is Precious</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					</p>
+					<a href="#contact" class="cta" title="">View Details</a>
+				</div>
+				<div class="portfolio-img has-margin-right" data-aos="fade-left" data-aos-delay="1200">
+					<img src="{{ url_for('static',filename='images/vol.jpg')}}" alt="">
+				</div>
+			</div>
+			<div class="portfolio-item">
+				<div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
+					<img src="{{ url_for('static',filename='images/img10.jpg')}}" alt="">
+				</div>
+				<div class="portfolio-description" data-aos="fade-left" data-aos-delay="1800">
+					<h6>Join Us</h6>
+					<h1>Come Forward</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					</p>
+					<a href="#" class="cta" title="">View Details</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="contact" id="contact" style="width: 100%; height: 100%;
+	 background-image: url({{ url_for('static',filename='images/img2.jpg')}});
+	 background-repeat: no-repeat;
+	  background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 15rem 0;">
+		<div class="container">
+			<div class="section-heading">
+				<h1>contact</h1>
+				<h6>Let's work together</h6>
+			</div>
+			<form METHOD="post" action="" class="form-container" autocomplete="off" id="myForm">
+                 {{ forms.hidden_tag() }}
+                <fieldset>
+					<div class="box">
+
+
+					<div class="form-group">
+                        <label for="exampleInputName">Name</label><br>
+
+                         {{ forms.name (class="form-control form-control-lg ")}}
+                                {% if forms.name.errors %}
+                                    {% for error in forms.name.errors %}
+                                        <span>{{error}}</span>
+                                     {% endfor %}
+                                {% endif %}
+                    </div>
+					<!--<div class="form-group">
+						<label for="exampleInputLname">Last Name</label>
+						<input type="text" class="form-control" id="exampleInputLname" placeholder="Last Name" autocomplete="off">
+					</div>-->
+					<div class="form-group">
+						<label for="exampleInputEmail">Email Address</label>
+						{{ forms.email (class="form-control form-control-lg ")}}
+                        {% if forms.email.errors %}
+
+                            {% for error in forms.email.errors %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                        {% else %}
+
+                        {% endif %}
+					</div>
+					<div class="form-group">
+						<label for="exampleInputCpassword2">Address</label>
+						{{ forms.address (class="form-control form-control-lg ")}}
+                        {% if forms.address.errors %}
+
+                            {% for error in forms.address.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        {% else %}
+
+                        {% endif %}
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Phone</label>
+						{{ forms.phone (class="form-control form-control-lg ")}}
+                         {% if forms.phone.errors %}
+
+                            {% for error in forms.phone.errors %}
+                                <span>{{error}}</span>
+                            {% endfor %}
+                        {% else %}
+
+                        {% endif %}
+
+					</div>
+					<div class="form-group">
+						<label for="exampleInputCpassword2">Comments</label>
+						{{ forms.comments (class="form-control form-control-lg ")}}
+                        {% if forms.comments.errors %}
+
+                            {% for error in forms.comments.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        {% else %}
+
+                        {% endif %}
+					</div>
+
+
+
+
+                        <a href="{{ url_for('contact') }}" onclick="myFunction()">{{ forms.submit (class="btn btn-block btn-success")}}</a>
+
+
+					</div>
+                </fieldset>
+				</form>
+		</div>
+	</section>
+	<footer class="copyright">
+		<div class="up" id="up">
+			<i class="fas fa-chevron-up"></i>
+		</div>
+		<p>&copy; 2020 EkChhat</p>
+	</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{ url_for('static',filename='script/main.js') }}"></script>
+
+</body>
+</html>
