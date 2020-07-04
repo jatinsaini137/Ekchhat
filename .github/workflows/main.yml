@@ -12,7 +12,7 @@ env:
   EB_APPLICATION_NAME       : "ekchhat"
   EB_ENVIRONMENT_NAME       : "Ekchhat-env"
   DEPLOY_PACKAGE_NAME       : "flask-app-${{ github.sha }}.zip"
-  ANS_REGION_NAME           : "ap-south-1"
+  AWS_REGION_NAME           : "ap-south-1"
 
 on: 
   push:
