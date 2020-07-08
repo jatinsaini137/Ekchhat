@@ -3,7 +3,7 @@
 
   
 # Copyrighted by Xebec Corporation
-#Made by Tejas Singh
+# Made by Tejas Singh
 
 #--------------------------------------------------------------------------
 name: CI-CD-Pipeline-to-AWS-ElasticBeanstalk
@@ -45,6 +45,7 @@ jobs:
       
   my_cd_pipeline:
      runs-on: ubuntu_latest
+     needs: [my_ci_pipeline]
   
      steps:
      - name: Configure my AWS Credentials
