@@ -43,10 +43,10 @@ jobs:
     - name: Print nice message on completion of CI Pipeline
       run : echo "CI Pipeline part finished successfully"
       
-my_cd_pipeline:
-  runs-on: ubuntu_latest
+  my_cd_pipeline:
+   runs-on: ubuntu_latest
   
-  steps:
+   steps:
    - name: Configure my AWS Credentials
      uses: aws-actions/configure-aws-credentials@v1
      with:
