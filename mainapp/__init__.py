@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///C:/Users/bittu/Desktop/EkChha
 app.config['SQLAlCHEMY_TRACK_MODIFICATION'] = True
 db = SQLAlchemy(app)
 
-from mainapp import routes
+import routes
 
 
 

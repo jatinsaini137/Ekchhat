@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, flash,request
-from mainapp.forms import ContactUsForm,DonateForm,PartnerForm
-from mainapp.models import ContactUs,Donate,Partner
-from mainapp.__init__ import  db, app
+from forms import ContactUsForm,DonateForm,PartnerForm
+from models import ContactUs,Donate,Partner
+from __init__ import  db, app
 
 
 #success page
