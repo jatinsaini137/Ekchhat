@@ -5,10 +5,7 @@ bs4==0.0.1
 Click==7.0
 Flask==1.1.1
 Flask-Bcrypt==0.7.1
-Flask-Dance==3.0.0
 Flask-Login==0.4.1
-Flask-OAuth==0.12
-Flask-OAuthlib==0.9.5
 Flask-SQLAlchemy==2.4.1
 Flask-Views==0.2.1
 Flask-WTF==0.14.2
