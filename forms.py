@@ -2,8 +2,8 @@ from flask import request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email,  ValidationError
-from mainapp.models import ContactUs
-from mainapp.__init__ import db
+from models import ContactUs
+from __init__ import db
 from flask_sqlalchemy import SQLAlchemy
 
 
