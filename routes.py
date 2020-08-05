@@ -4,6 +4,15 @@ from models import ContactUs,Donate,Partner
 from __init__ import  db, app
 
 
+from selenium import webdriver
+from bs4 import BeautifulSoup
+import pandas as pd
+
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
+
 #success page
 
 # routes for index,register,login,logout,error...
@@ -24,8 +33,30 @@ def contact():
     return render_template('index.html', forms=forms)
 
 @app.route('/Donate_Food' ,methods=['GET','POST'])
+
+def donate():
+		#driver = webdriver.Chrome()
+		products=[] #List to store name of the product
+		prices=[] #List to store price of the product
+		ratings=[] #List to store rating of the product
+		driver.get("https://www.flipkart.com/search?q=nokia+mobiles&sid=tyy%2C4io&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_1_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_1_na_na_na&as-pos=1&as-type=RECENT&suggestionId=nokia+mobiles%7CMobiles&requestId=34c5d1f7-8967-44ef-82e4-d7d691ad0f72&as-backfill=on")
+
+		content = driver.page_source
+		soup = BeautifulSoup(content)
+		for a in soup.findAll('a',href=True, attrs={'class':'_31qSD5'}):
+			name=a.find('div', attrs={'class':'_3wU53n'})
+			price=a.find('div', attrs={'class':'_1vC4OE _2rQ-NK'})
+			rating=a.find('div', attrs={'class':'hGSR34 _2beYZw'})
+			products.append(name.text)
+			prices.append(price.text)
+    		#ratings.append(rating.text)
+
+		df = pd.DataFrame({'Product Name':products,'Price':prices})
+		df.to_csv('products.csv', index=False, encoding='utf-8')
+		return "Success"
+
     
-def donate():    
+"""def donate():    
     forms = DonateForm()
     if forms.validate_on_submit():        
         donatefood = Donate(name=forms.name.data,
@@ -35,7 +66,7 @@ def donate():
         #flash('hurreey account created','success')
         
 
-    return render_template('donate_food.html', forms=forms)
+    return render_template('donate_food.html', forms=forms)"""
 
 @app.route('/Partner' ,methods=['GET','POST'])
     
